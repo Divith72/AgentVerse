@@ -23,6 +23,7 @@ def seed_data(db: Session):
         CriterionReadiness(criterion_id="criterion1", name="Curricular Aspects", score=85.0),
         CriterionReadiness(criterion_id="criterion2", name="Teaching-Learning and Evaluation", score=58.0),
         CriterionReadiness(criterion_id="criterion3", name="Research, Innovations and Extension", score=90.0),
+        CriterionReadiness(criterion_id="criterion4", name="Student Performence", score=90.0),
     ]
     db.add_all(criteria)
 

@@ -1,0 +1,44 @@
+# Ignore test directories and test files
+/tests/
+/**/tests/
+test_*.py
+*_test.py
+
+# pytest cache
+.pytest_cache/
+
+# Python cache
+__pycache__/
+
+# Node / frontend
+node_modules/
+dist/
+build/
+
+# Frontend & test files
+*.spec.*
+*.test.*
+*.spec.js
+*.spec.jsx
+*.spec.ts
+*.spec.tsx
+*.test.js
+*.test.jsx
+*.test.ts
+*.test.tsx
+
+# Test runner caches and reports
+.pytest_cache/
+.vitest/
+.cache/vitest/
+coverage/
+.nyc_output/
+coverage-final.json
+
+# Playwright / Cypress
+playwright-report/
+playwright-results/
+playwright/.auth/
+cypress/videos/
+cypress/screenshots/
+
