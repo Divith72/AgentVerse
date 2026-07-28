@@ -1,5 +1,6 @@
 # Ignore test directories and test files
 /tests/
+tests/
 /**/tests/
 test/
 test_*.py
