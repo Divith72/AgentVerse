@@ -44,3 +44,20 @@ playwright/.auth/
 cypress/videos/
 cypress/screenshots/
 
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+.env.production
+.env.*
+
+# AI test files
+*ai_test*
+*test_ai*
+*ai-test*
+*test-ai*

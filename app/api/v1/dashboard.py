@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from typing import Dict, Any
+from typing import Dict, Any, List
 
 from app.db.session import get_db, seed_data
 from app.db.models import CriterionReadiness, Document, NAACBenchmark
@@ -71,6 +71,13 @@ def reset_database(db: Session = Depends(get_db)):
     db.commit()
     seed_data(db)
     return {"message": "Database reset and seeded with default data successfully."}
+
+@router.get("/dashboard/documents", response_model=List[DocumentSchema])
+def get_documents(db: Session = Depends(get_db)):
+    """
+    Fetch all documents from the tracking list.
+    """
+    return db.query(Document).all()
 
 @router.post("/dashboard/documents", response_model=DocumentSchema, status_code=status.HTTP_201_CREATED)
 def create_document(doc: DocumentCreate, db: Session = Depends(get_db)):
